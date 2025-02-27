@@ -15,14 +15,15 @@ public class Main {
         try (Connection connection = DriverManager.getConnection(url, user, password);
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(query)) {
-            System.out.println("Books  by title:");
+            System.out.println("Books   title:");
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("title"));
             }
         } catch (Exception e) {
-            System.err.println("Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
+
     }
 
 
